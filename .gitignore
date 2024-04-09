@@ -1,0 +1,9 @@
+#Custom
+output
+pelicanconf_local.py
+
+#Python
+*.py[cod]
+
+#Themes
+themes/
