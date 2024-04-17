@@ -5,7 +5,7 @@ Your database is not elastic!
 :date: 2024-04-17
 :summary: Reality of web development when dealing with elastic compute resources and a relational database
 
-.. image:: images/database-melting.jpeg
+.. image:: images/elastic-database.jpeg
    :width: 500
    :alt: Image of a melting database server with a scared developer
 
