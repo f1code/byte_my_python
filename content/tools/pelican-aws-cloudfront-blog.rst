@@ -3,7 +3,7 @@ A Python-powered blog on AWS Cloudfront
 
 :date: 2024-04-08 06:29
 :category: Tools
-:summary: 
+:summary: Easy setup of a blog using a popular Python-powered static site generator and AWS tools.
 
 To start this blog, naturally I wanted to use a Python tool.  I was attracted by the philosophy of
 Jekyll for static site generation, and as it seems every language has his static site generator
@@ -16,7 +16,8 @@ by another engine, so it was not too important to spend much time on this decisi
 of the job of a software engineer is knowing which decisions are important to spend time on, which ones
 can be deferred, and how to keep these decisions flexible).
 I decided to host it on Cloudfront, I have a lot of experience with the more "backend" AWS services so it should be a fun learning
-experiment (again, an easy to modify later decision).
+experiment (again, an easy to modify later decision).  Cloudfront used to be rather pricey but now has a generous free tier
+that is more than sufficient for a personal blog.
 
 This short article serves to document my journey as a howto if you are interested in replicating it.
 
@@ -64,9 +65,12 @@ You must have a correctly configured AWS CLI for this step.  Refer to the `Amazo
 
 #. Create a CloudFront distribution in the AWS Console.  Specify the bucket as the "origin".  Leave the WAF (web application
    firewall) disabled.  Also change "Origin access" to public.  Again, it would be possible / best practice to specify this
-   using a policy... but no real purpose here.  Without configuring an alternate domain, CloudFront will set up a random
-   ``cloudfront.net`` domain name you can use for testing.  I ran into some "Access Denied" error here... to troubleshoot, first run
-   a curl command to retrieve the file directly from S3:
+   using a policy... but no real purpose here.  Lastly, set the "Default root object" to "index.html".  We'll come back later to
+   configure the custom domain.
+   Without configuring an alternate domain, CloudFront will set up a random
+   ``cloudfront.net`` domain name I can use for testing (something like `d2dl3dxwttz643.cloudfront.net
+   <https://d2dl3dxwttz643.cloudfront.net/>`_ I ran into some "Access Denied" error here... to troubleshoot, first run a curl
+   command to retrieve the file directly from S3:
 
    .. code:: bash
 
@@ -76,4 +80,7 @@ You must have a correctly configured AWS CLI for this step.  Refer to the `Amazo
    the previous steps: I had left ACL disabled on the bucket.  I went back and re-enabled them through the console, and redid
    the upload.
 
-#. Register a domain 
+
+#. Register a domain.  This is pretty easy with AWS Route53 and it will integrate with the rest.  Go to `AWS Route53 in the
+   AWS Console <https://console.aws.amazon.com/route53/domains/home>`_, click Register Domain, and follow the prompt - it
+   will take a little while to complete.
