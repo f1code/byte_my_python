@@ -4,3 +4,4 @@
 [submodule "Flex"]
 	path = Flex
 	url = git@github.com:ngaller/Flex.git
+  branch = bytemypython
