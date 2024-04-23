@@ -1,5 +1,6 @@
 AUTHOR = 'Nicolas Galler'
 SITENAME = 'Byte My Python'
+SITESUBTITLE = "tfwwftwft"
 SITEURL = ""
 
 PATH = "content"
@@ -14,6 +15,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+THEME = "./Flex"
 
 # Blogroll
 LINKS = (
@@ -24,11 +26,11 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Github", "https://github.com/ngaller"),
+    ("github", "https://github.com/ngaller"),
+    ("rss", "https://github.com/ngaller"),
 )
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
