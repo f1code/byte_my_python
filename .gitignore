@@ -7,3 +7,4 @@ pelicanconf_local.py
 
 #Themes
 themes/
+output/
