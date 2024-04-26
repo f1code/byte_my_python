@@ -27,7 +27,7 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ("github", "https://github.com/ngaller"),
-    ("rss", "https://github.com/ngaller"),
+    ("rss", "/feeds/all.atom.xml"),
 )
 
 DEFAULT_PAGINATION = 5
