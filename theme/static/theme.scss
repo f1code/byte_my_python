@@ -1,1 +1,21 @@
 @use "pico/pico";
+
+main {
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 200px auto;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-rows: 1fr;
+    }
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+article {
+    grid-area: content;
+}

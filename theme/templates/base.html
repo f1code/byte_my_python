@@ -12,7 +12,7 @@
 	{% block meta %}{% endblock %}
 
 	<!-- Stylesheets and Web Fonts -->
-	{% assets filters="scss, cssmin", output="style.min.css", "theme.scss", "pygments.css" %}
+	{% assets filters="scss", output="style.min.css", "theme.scss", "pygments.css" %}
 	<link href="/{{ ASSET_URL }}" rel="stylesheet">
 	{% endassets %}
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -24,8 +24,10 @@
 </head>
 
 <body>
-	<div class="container">
+	<main class="container">
+		<aside>
 		{% include "partial/sidebar.html" %}
+		</aside>
 
 		<article>
 			{% block content %}{% endblock %}
@@ -35,7 +37,7 @@
 		<footer>
 			<p>{{ FOOTER_TEXT }}</p>
 		</footer>
-	</div>
+	</main>
 
 	{% if GOOGLE_ANALYTICS %}
 	<!-- Google Analytics -->
