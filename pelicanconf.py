@@ -4,6 +4,7 @@ SITESUBTITLE = "tfwwftwft"
 SITEURL = ""
 
 PATH = "content"
+STATIC_PATHS = ["images"]
 
 TIMEZONE = 'Europe/Brussels'
 
@@ -15,7 +16,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-THEME = "./Flex"
+THEME = "./theme"
+ICONS_PATH = "images/icons"
 
 # Blogroll
 LINKS = (
