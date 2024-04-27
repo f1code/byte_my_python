@@ -26,10 +26,15 @@ LINKS = (
     ("Jinja2", "https://palletsprojects.com/p/jinja/"),
 )
 
+SIDEBAR_LINKS = (
+    ("/", "Home", "home"),
+    ("/pages/about", "About", "question"),
+    ("https://github.com/ngaller", "Github", "github"),
+    ("/feeds/all.atom.xml", "Feed", "rss"),
+)
+
 # Social widget
 SOCIAL = (
-    ("github", "https://github.com/ngaller"),
-    ("rss", "/feeds/all.atom.xml"),
 )
 
 DEFAULT_PAGINATION = 5

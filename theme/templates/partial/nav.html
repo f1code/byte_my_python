@@ -1,0 +1,9 @@
+{% if SIDEBAR_LINKS %}
+<nav>
+	<ul>
+		{% for link, title, icon in SIDEBAR_LINKS %}
+		<li><a href="{{ link }}" aria-label="{{ title }}" class="secondary"><i role="img" class="fa fa-{{ icon }}">&nbsp;</i><span>{{ title }}</span></a></li>
+		{% endfor %}
+	</ul>
+</nav>
+{% endif %}
