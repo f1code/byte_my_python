@@ -1,10 +1,10 @@
 AUTHOR = 'Nicolas Galler'
 SITENAME = 'Byte My Python'
-SITESUBTITLE = "tfwwftwft"
+SITESUBTITLE = "Python, data, and more"
 SITEURL = ""
 
 PATH = "content"
-STATIC_PATHS = ["images"]
+STATIC_PATHS = ["images", "pages"]
 
 TIMEZONE = 'Europe/Brussels'
 
@@ -17,7 +17,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 THEME = "./theme"
+# store customizable theme pictures
 ICONS_PATH = "images/icons"
+PROFILE_ICON = "python.jpg"
 
 # Blogroll
 LINKS = (
@@ -29,7 +31,7 @@ LINKS = (
 SIDEBAR_LINKS = (
     ("/", "Home", "home"),
     ("/pages/about", "About", "question"),
-    ("https://github.com/ngaller", "Github", "github"),
+    ("https://github.com/nicocrm", "Github", "github"),
     ("/feeds/all.atom.xml", "Feed", "rss"),
 )
 

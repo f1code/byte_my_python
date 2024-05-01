@@ -90,8 +90,8 @@ Create or customize a theme
 
 I wanted to customize the theme a bit.  I found a nice one called "pneumatic" that I liked, quite minimalist, very clean.
 Since I am a full stack dev, I wanted to fiddle with it.  I copied the templates but restarted the CSS from scratch using the
-`pico<https://picocss.com/>` framework.  I have not experimented with it before, and it's a good occasion to try a different 
+`pico <https://picocss.com/>`_ framework.  I have not experimented with it before, and it's a good occasion to try a different 
 approach to CSS - at work we usually have the safe choices of Bootstrap or Material Design.
 
 So This lead me to discover the plugin feature of Pelican, which is very easy to use with
-pip.  The `webasset<https://github.com/pelican-plugins/webassets>` plugin is a good one to use for this purpose.  It can pre
+pip.  The `webasset <https://github.com/pelican-plugins/webassets>`_ plugin is a good one to use for this purpose.  It can pre

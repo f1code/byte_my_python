@@ -1,12 +1,16 @@
 @use "pico/pico";
 
 main {
-    display: grid;
-    row-gap: 0.75em;
+    display: flex;
+    gap: 0.75em;
 }
 
 aside {
-    grid-area: sidebar;
+    flex-shrink: 0;
+
+    h6 {
+        margin-top: .75em;
+    }
 }
 
 img.avatar {
@@ -15,26 +19,11 @@ img.avatar {
     border-radius: var(--avatar-size);
 }
 
-article {
-    grid-area: content;
-}
-
-// header {
-//     display: flex;
-//     flex-direction: row;
-//     --avatar-size: 75px;
-//     align-items: space-between;
-
-//     nav span {
-//         font-size: 0;
-//     }
-// }
-
 // mobile styles
 @media (max-width: 767px) {
     main {
         --avatar-size: 75px;
-        grid-template-areas: "sidebar" "content";
+        flex-direction: column;
     }
 
     aside {
@@ -59,9 +48,14 @@ article {
 @media (min-width: 768px) {
     main {
         --avatar-size: 150px;
-        grid-template-areas: "sidebar content";
-        grid-template-columns: 200px auto;
-        column-gap: 0.75em;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    aside {
+        width: 20vw;
+        min-width: 200px;
+        max-width: 250px;
     }
 
     header {

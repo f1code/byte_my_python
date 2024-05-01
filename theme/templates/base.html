@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
 	<!-- Basic Metas -->
@@ -19,22 +19,21 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Favicons -->
-	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/{{ THEME_IMAGES_PATH }}/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/{{ THEME_IMAGES_PATH }}/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="/{{ THEME_IMAGES_PATH }}/favicon-32x32.png" sizes="32x32"> -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/{{ ICONS_PATH }}/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-32x32.png" sizes="32x32">
 </head>
 
-<body data-theme="dark">
+<body>
 	<!-- <header>
-		<a href="/"><img class="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/profile.png"></a>
+		<a href="/"><img class="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/{{ PROFILE_ICON }}"></a>
 
 		{% include "partial/nav.html" %}
 	</header> -->
 	<main class="container">
 		<aside>
-			<a href="/"><img class="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/profile.png"></a>
-			<div id="name"><a href="/">{{ SITENAME }}</a></div>
-			<div id="bio">{{ SITESUBTITLE }}</div>
+			<a href="/"><img class="avatar" alt="{{ SITENAME }}" src="/{{ ICONS_PATH }}/{{ PROFILE_ICON }}"></a>
+			<h6 id="bio">{{ SITESUBTITLE }}</h6>
 
 			{% include "partial/nav.html" %}
 		</aside>
