@@ -85,13 +85,19 @@ You must have a correctly configured AWS CLI for this step.  Refer to the `Amazo
    AWS Console <https://console.aws.amazon.com/route53/domains/home>`_, click Register Domain, and follow the prompt - it
    will take a little while to complete.
 
+The way CloudFront works, it will download the files from S3 the first time they are requested, then cache them for up to 24h by default.
+Just something to be aware of when you publish new content.  You can modify this behavior under the "Behaviors" tab of the CloudFront
+console.  You can also create an immediate invalidation for all the cached files, with a little bit of effort it would be possible
+to combine to automate that within the upload command.
+
 Create or customize a theme
 ---------------------------
 
-I wanted to customize the theme a bit.  I found a nice one called "pneumatic" that I liked, quite minimalist, very clean.
+I wanted to customize the theme a bit.  I found a nice one called "`Pneumatic <https://github.com/iKevinY/pneumatic>`_" that I liked, quite minimalist, very clean.
 Since I am a full stack dev, I wanted to fiddle with it.  I copied the templates but restarted the CSS from scratch using the
 `pico <https://picocss.com/>`_ framework.  I have not experimented with it before, and it's a good occasion to try a different 
 approach to CSS - at work we usually have the safe choices of Bootstrap or Material Design.
 
-So This lead me to discover the plugin feature of Pelican, which is very easy to use with
-pip.  The `webasset <https://github.com/pelican-plugins/webassets>`_ plugin is a good one to use for this purpose.  It can pre
+This lead me to discover the plugin feature of Pelican, which is very easy to use with
+pip.  The `webasset <https://github.com/pelican-plugins/webassets>`_ plugin is a good one to use for this purpose.  It can preprocess files
+and generate a new file name that can then be included in the HTML template.  I had a bit of fun with CSS and off we went :)

@@ -17,11 +17,13 @@
 {% endblock %}
 
 {% block content %}
-	<h1><a href="/{{ article.url }}" title="Permalink to {{ article.title | striptags }}">{{ article.title }}</a></h1>
+	<h1 class="title"><a href="/{{ article.url }}" title="Permalink to {{ article.title | striptags }}">{{ article.title }}</a></h1>
 	<time class="date" datetime="{{ article.date }}">{{ article.locale_date }}</time>
 	<div class="content">
 		{{ article.content }}
 	</div>
+
+  <hr />
 
 	{% if article.next_article or article.prev_article %}
 	<div id="related-articles">
@@ -53,4 +55,5 @@
 	})();
 	</script>
 	{% endif %}
+
 {% endblock %}

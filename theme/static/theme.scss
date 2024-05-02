@@ -1,5 +1,36 @@
 @use "pico/pico";
 
+// Typography
+
+h1, h2, h3 { font-weight: bold; }
+
+h1 {
+	font-size: 1.7em;
+}
+
+h2 {
+	font-size: 1.4em;
+	margin-top: 30px;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-top: 25px;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	outline: 0;
+}
+
+// Layout
+
+$desktop: "only screen and (min-width: 960px)";
+$handheld: "only screen and (max-width: 959px)";
+$mobile: "only screen and (max-width: 767px)";
+
+
 main {
     display: flex;
     gap: 0.75em;
@@ -19,8 +50,34 @@ img.avatar {
     border-radius: var(--avatar-size);
 }
 
-// mobile styles
-@media (max-width: 767px) {
+article {
+  flex: 1 1 auto;
+}
+
+article img {
+	max-width: 95%;
+	margin: 0 auto;
+	display: block;
+}
+
+.title {
+	float: left;
+	margin-bottom: 0.5em;
+}
+
+.date {
+	padding-top: 0.5em;
+	float: right;
+	display: block;
+	color: #555;
+}
+
+.content {
+	clear: both;
+	hr { margin: 25px 10px; }
+}
+
+@media #{$handheld} {
     main {
         --avatar-size: 75px;
         flex-direction: column;
@@ -44,8 +101,7 @@ img.avatar {
     }
 }
 
-// desktop styles
-@media (min-width: 768px) {
+@media #{$desktop} {
     main {
         --avatar-size: 150px;
         flex-direction: row;
