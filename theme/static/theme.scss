@@ -1,4 +1,6 @@
-@use "pico/pico";
+@use "pico/pico" with (
+  $theme-color: "jade"
+);
 
 // Typography
 
