@@ -1,29 +1,32 @@
-@use "pico/pico" with (
-  $theme-color: "jade"
+@use "pico/pico" with ($theme-color: "jade"
 );
 
 // Typography
 
-h1, h2, h3 { font-weight: bold; }
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
 
 h1 {
-	font-size: 1.7em;
+    font-size: 1.7em;
 }
 
 h2 {
-	font-size: 1.4em;
-	margin-top: 30px;
+    font-size: 1.4em;
+    margin-top: 30px;
 }
 
 h3 {
-	font-size: 1.2em;
-	margin-top: 25px;
+    font-size: 1.2em;
+    margin-top: 25px;
 }
 
 a {
-	text-decoration: none;
-	font-weight: bold;
-	outline: 0;
+    text-decoration: none;
+    font-weight: bold;
+    outline: 0;
 }
 
 // Layout
@@ -53,30 +56,34 @@ img.avatar {
 }
 
 article {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 article img {
-	max-width: 95%;
-	margin: 0 auto;
-	display: block;
+    max-width: 95%;
+    margin: 0 auto;
+    display: block;
+
 }
 
 .title {
-	float: left;
-	margin-bottom: 0.5em;
+    float: left;
+    margin-bottom: 0.5em;
 }
 
 .date {
-	padding-top: 0.5em;
-	float: right;
-	display: block;
-	color: #555;
+    padding-top: 0.5em;
+    float: right;
+    display: block;
+    color: #555;
 }
 
 .content {
-	clear: both;
-	hr { margin: 25px 10px; }
+    clear: both;
+
+    hr {
+        margin: 25px 10px;
+    }
 }
 
 @media #{$handheld} {
@@ -122,5 +129,12 @@ article img {
 
     aside {
         text-align: center;
+    }
+
+    article {
+        img.align-left {
+            float: left;
+            margin-right: 1em;
+        }
     }
 }
