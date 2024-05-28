@@ -1,4 +1,11 @@
-@use "pico/pico" with ($theme-color: "jade"
+@use "pico/pico" with (
+    $theme-color: "jade",
+    $breakpoints: (
+        "xxl": (
+            // disable
+            "breakpoint": 9999px
+        )
+    )
 );
 
 // Typography
