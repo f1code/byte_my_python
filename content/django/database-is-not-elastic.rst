@@ -5,20 +5,15 @@ Your database is not elastic!
 :date: 2024-04-17
 :summary: Reality of web development when dealing with elastic compute resources and a relational database
 
-This post stems from a recent experience with a web application that was not scaling as expected.  The application was designed to be able to scale horizontally, but the database was not.
-This is a common problem in web development, and one that is often overlooked until it is too late.  The problem is that databases, especially relational databases,
-are not as elastic as the rest of the application stack.  You can spin a new web server up in seconds, add some queue workers even faster, but the database is a different beast.
-Because of the strict principles it has to adhere to in order to ensure data integrity and consistency through a convenient API, scaling it horizontally 
-(adding more servers to share the load) is quite complex - read-only replicas are possible, but not particularly cheap or easy to set up (cloud vendors will 
-make that easier of course).  Sharding is another option, but it is not trivial to implement and maintain (and can be quite costly too).
-And then there is the problem of transactions that span multiple shards, which is a whole other can of worms.
-You can scale it up (vertically) but that is not a sustainable solution.  Eventually you will hit the limits of the biggest server you can afford, and then what?
+Recently, I had a tough experience with a web app that didn’t scale as planned. We built the app to easily add more servers, but the database couldn’t keep up. This is a common issue in web development and often gets overlooked until it’s too late. Databases, especially relational ones, aren’t as flexible as other parts of the app. While you can quickly add more web servers or queue workers, scaling a database horizontally (adding more servers) is tricky and costly.
 
-It can be counter intuitive.  In the earlier days of distributed application development (Windows-based CRM applications were my bread and butter in the 2000's),
-before the cloud, the database was often the only thing that could scale, and the application was limited by the performance of the client
-machines, which were essentially not upgradeable (or at least not easily).  Now it is the other way around.
+You can create read-only replicas, but setting them up isn’t easy or cheap. Sharding, another option, involves splitting the database into pieces, but it’s complicated and expensive. Handling transactions across these pieces is also a headache. Scaling up (making one server bigger) isn’t a long-term fix. Eventually, you’ll hit the limit of the biggest server you can afford.
 
-(TODO insert diagram)
+It’s a strange reversal. In the past, when I worked on distributed apps like Windows-based CRM systems, the database was often the only part that could scale, while client machines couldn’t. Now, it’s the opposite.
+
+.. image:: images/desktop_vs_web_app_scaling.png
+    :alt: Desktop vs Web App Scaling
+    :align: center
 
 This reality hit home for me last week: a deployment which had been carefully planned and tested for weeks quickly went south
 when it became obvious that too much of a burden was shifted to the database.  The web workers happily scaled out to try and
@@ -29,3 +24,4 @@ Eventually we were able to resolve this with not too much broken bones by scalin
 The cloud managed database service made that easier but it was still not a seamless process (and is also rather costly since it can't automatically scale back down either).
 And the feature had to be re-architected to be less database intensive - thankfully the change was rather isolated so we could turn that around quickly.
 
+This experience taught us an important lesson: databases are a critical part of web development that require careful planning to avoid major problems down the line.
