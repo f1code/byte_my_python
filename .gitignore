@@ -6,3 +6,4 @@ pelicanconf_local.py
 *.py[cod]
 
 output/
+.env

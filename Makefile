@@ -1,3 +1,6 @@
+-include .env
+export
+
 PY?=
 PELICAN?=uv run pelican
 PELICANOPTS=

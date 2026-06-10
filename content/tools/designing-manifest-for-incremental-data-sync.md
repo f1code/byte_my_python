@@ -2,6 +2,7 @@ Title: Designing the Perfect Manifest for Incremental Data Sync
 Date: 2026-02-05
 Category: Tools
 Tags: data-sync, architecture, frictionless-data, json
+Status: draft
 
 Building a data synchronization service is easy until things break. It's easy to move files from Point A to Point B, but it's incredibly hard to guarantee that Point B is a perfect mirror of Point A — especially when networks fail, data arrives out of order, or sources go silent.
 
