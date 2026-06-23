@@ -4,7 +4,12 @@ SITESUBTITLE = "Python, data, and more"
 SITEURL = ""
 
 PATH = "content"
-STATIC_PATHS = ["images", "pages"]
+STATIC_PATHS = ["images", "pages", "extra/CNAME"]
+
+# Place the CNAME file at the site root for GitHub Pages custom domain
+EXTRA_PATH_METADATA = {
+    "extra/CNAME": {"path": "CNAME"},
+}
 
 TIMEZONE = 'Europe/Brussels'
 
