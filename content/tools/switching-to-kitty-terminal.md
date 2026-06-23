@@ -25,16 +25,16 @@ inactive_text_alpha -0.6
 
 ### Cheat sheet - some of the most useful shortcuts
 
-`kitty_mod+Z` = Zoom
-`Cmd+Enter` or `kitty_mod+Enter`: new kitty window (= new pane within the current tab). This will place automatically in function of the selected [layout](https://sw.kovidgoyal.net/kitty/overview/#layouts).
+ - `kitty_mod+Z` = Zoom
+ - `Cmd+Enter` or `kitty_mod+Enter`: new kitty window (= new pane within the current tab). This will place automatically in function of the selected [layout](https://sw.kovidgoyal.net/kitty/overview/#layouts).
 Remap the command to `new_window_with_cwd` to have it open at the current working dir.
-`kitty_mod+[ or ]`: previous / next window
-`Cmd+t or kitty_mod+T`: new tab
-`Shift+Cmd+[ or ]`: previous / next tab
-`kitty_mod+H` = edit scrollback in nvim (there is a sample configuration line to uncomment for that). The `q` key is remapped to exit.
-`kitty_mod+L` = switch layout... there are 7 of them. You can configure which ones are enabled—more on that below.
-`kitty_mod+P,F` = pick a file, insert in terminal (this is one of several uses of the “hint kitten”, more on that below)
-`kitty_mod+F3` = command palette
+ - `kitty_mod+[ or ]`: previous / next window
+ - `Cmd+t or kitty_mod+T`: new tab
+ - `Shift+Cmd+[ or ]`: previous / next tab
+ - `kitty_mod+H` = edit scrollback in nvim (there is a sample configuration line to uncomment for that). The `q` key is remapped to exit.
+ - `kitty_mod+L` = switch layout... there are 7 of them. You can configure which ones are enabled—more on that below.
+ - `kitty_mod+P,F` = pick a file, insert in terminal (this is one of several uses of the “hint kitten”, more on that below)
+ - `kitty_mod+F3` = command palette
 
 ## Layouts
 
