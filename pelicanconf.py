@@ -36,7 +36,7 @@ LINKS = (
 SIDEBAR_LINKS = (
     ("/", "Home", "home"),
     ("/pages/about.html", "About", "question"),
-    ("https://github.com/nicoglr", "Github", "github"),
+    ("https://github.com/f1code", "Github", "github"),
     ("/feeds/all.atom.xml", "Feed", "rss"),
 )
 
