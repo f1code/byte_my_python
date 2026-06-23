@@ -7,3 +7,4 @@ pelicanconf_local.py
 
 output/
 .env
+node_modules/

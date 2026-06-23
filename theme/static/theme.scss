@@ -64,6 +64,8 @@ img.avatar {
 
 article {
     flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 article img {
