@@ -35,6 +35,8 @@ Remap the command to `new_window_with_cwd` to have it open at the current workin
  - `kitty_mod+L` = switch layout... there are 7 of them. You can configure which ones are enabled—more on that below.
  - `kitty_mod+P,F` = pick a file, insert in terminal (this is one of several uses of the “hint kitten”, more on that below)
  - `kitty_mod+F3` = command palette
+ - `kitty_mod+F8` = swap 2 windows, that's pretty handy
+ - `kitty_mod+1,2,3,4` = go to window
 
 ## Layouts
 
@@ -46,6 +48,8 @@ Something I used a lot in I3. Instead of deciding whether you want to split a wi
 - Stack
 
 The stack layout is very handy for zooming a single window, but I mapped that one separately to `Mod+Z`.
+There is a split layout which lets you do windows however you want, with vertical / horizontal splits, but I'm going to
+try and live without that one.
 
 ## Kittens
 
