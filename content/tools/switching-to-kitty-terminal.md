@@ -4,7 +4,7 @@ Modified: 2026-06-23
 Category: Tools
 Tags: kitty, terminal, ghostty, zellij, productivity
 
-This weekend I moved from Ghostty + Zellij to Kitty.
+This weekend I moved from Ghostty + Zellij to [Kitty](https://sw.kovidgoyal.net/kitty).
 
 The main reason I wanted to drop Zellij was the overhead—especially in terms of memory (Ghostty regularly got up to 8GB of RAM, thanks to it). But there were still a few things missing when using Ghostty without Zellij... Customizing the click action for example was very difficult (in Zellij you can make a plugin to customize that, and I did one to be able to match the links in a way that fit my workflow better—[miserly-link](https://github.com/f1code/miserly-link)).
 
