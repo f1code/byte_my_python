@@ -1,5 +1,5 @@
 ---
-name: create-article
+name: review-article
 description: Create a new blog article from a markdown source for the Byte My Python Pelican site. Use when the user wants to publish, post, or turn a draft/notes into an article, clean up formatting, fix grammar and spelling, or review a draft for clarity before publishing.
 ---
 
