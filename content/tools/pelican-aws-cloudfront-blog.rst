@@ -101,3 +101,9 @@ approach to CSS - at work we usually have the safe choices of Bootstrap or Mater
 This lead me to discover the plugin feature of Pelican, which is very easy to use with
 pip.  The `webasset <https://github.com/pelican-plugins/webassets>`_ plugin is a good one to use for this purpose.  It can preprocess files
 and generate a new file name that can then be included in the HTML template.  I had a bit of fun with CSS and off we went :)
+
+Update (July 2026)
+------------------
+
+The build process to publish to AWS was a bit annoying, and CloudFront added needless friction - I updated the workflow to do the build in Github Actions, and publish to Github Pages.
+The configuration is visible in the `repo <https://github.com/f1code/byte_my_python/tree/main/.github/workflows>`_.
