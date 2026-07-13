@@ -315,8 +315,9 @@ aside div {
 	margin-top: 3em;
 }
 
-#next-neighbour { float: left; }
-#prev-neighbour { float: right; }
+#related-articles a { display: block; }
+#next-neighbour { text-align: left; }
+#prev-neighbour { text-align: right; margin-top: 0.5em; }
 
 
 // Media Queries
